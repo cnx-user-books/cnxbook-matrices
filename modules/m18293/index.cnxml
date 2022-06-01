@@ -1,0 +1,352 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- The Identity Matrix</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18293</md:content-id>
+  <md:title>Matrix Concepts -- The Identity Matrix</md:title>
+  <md:abstract>This module introduces the identity matrix and its properties.</md:abstract>
+  <md:uuid>c070e7d3-faef-4bdb-946f-08dd63a38c51</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/the-identity-matrix" strength="3">The Identity Matrix Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+      <para id="id6147965">When multiplying numbers, the number 1 has a special property: when you multiply 1 by any number, you get that same number back. We can express this property as an algebraic generalization:</para>
+      
+      <equation id="element-705"><m:math>
+<m:mn>1</m:mn>
+<m:mi>x</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+</m:math></equation><para id="id5776228">The matrix that has this property is referred to as the <emphasis>identity matrix</emphasis>.</para>
+      <para id="id5837764"><title>Definition of Identity Matrix</title>The <emphasis>identity matrix</emphasis>, designated as <m:math>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+</m:math>, is defined by the property:
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math></para>
+      <para id="id5743585">Note that the definition of [I] stipulates that the multiplication must <emphasis>commute</emphasis>—that is, it must yield the same answer no matter which order you multiply in. This is important because, for most matrices, multiplication does not commute.</para>
+      <para id="id6325034">What matrix has this property? Your first guess might be a matrix full of 1s, but that doesn’t work:</para>
+      <table id="id5913507" summary="">
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <tbody>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} ##
+3 {} # 4{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 1 {} ##
+1 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 3 {} ##
+7 {} # 7{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>so</emphasis>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 1 {} ##
+1 {} # 1{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <emphasis>is not an identity matrix</emphasis>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para id="id5885944">The matrix that <emphasis>does</emphasis> work is a diagonal stretch of 1s, with all other elements being 0.</para>
+      <table id="id6150999" summary="">
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <tbody>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} ##
+3 {} # 4{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math>=
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} ##
+3 {} # 4{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>so</emphasis>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <emphasis>is the identity for 2x2 matrices</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>9</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>π</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mn>1</m:mn><m:mo stretchy="false">/</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mtext>.</m:mtext><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+2 {} # 5 {} # 9 {} ##
+π {} #  - 2 {} # 8 {} ##
+ - 3 {} # 1/2 {} # 8 "." 3{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} # 0 {} ##
+0 {} # 1 {} # 0 {} ##
+0 {} # 0 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>9</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>π</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mn>1</m:mn><m:mo stretchy="false">/</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mtext>.</m:mtext><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+2 {} # 5 {} # 9 {} ##
+π {} #  - 2 {} # 8 {} ##
+ - 3 {} # 1/2 {} # 8 "." 3{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} # 0 {} ##
+0 {} # 1 {} # 0 {} ##
+0 {} # 0 {} # 1{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <emphasis>is the identity for 3x3 matrices</emphasis>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para id="id6293478">You should confirm those multiplications for yourself, and also confirm that they work in reverse order (as the definition requires).</para>
+      <para id="id6293484">Hence, we are led from the definition to:</para>
+      
+      <para id="id5796893"><title>The Identity Matrix</title>For any square matrix, its identity matrix is a diagonal stretch of 1s going from the upper-left-hand corner to the lower-right, with all other elements being 0.
+<emphasis>Non-square</emphasis> matrices do not have an identity. That is, for a non-square matrix 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math>, there is no matrix such that 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math>.</para>
+      
+      <para id="id6330118">Why no identity for a non-square matrix? Because of the requirement of commutativity. For a non-square matrix <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math> you might be able to find a matrix 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+</m:math> such that 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math>; however, if you reverse the order, you will be left with an illegal multiplication.</para>
+
+  </content>
+</document>

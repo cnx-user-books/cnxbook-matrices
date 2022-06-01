@@ -1,0 +1,725 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- Solving Linear Equations</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18292</md:content-id>
+  <md:title>Matrix Concepts -- Solving Linear Equations</md:title>
+  <md:abstract>This module explains how to use matrices to solve linear equations.</md:abstract>
+  <md:uuid>bdbb2879-7959-4b36-a75c-5294298a3134</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/solving-linear-systems-using-matrix-algebra" strength="3">Matrix Algebra Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+      <para id="id9673552">At this point, you may be left with a pretty negative feeling about matrices. The initial few ideas—adding matrices, subtracting them, multiplying a matrix by a constant, and matrix equality—seem almost too obvious to be worth talking about. On the other hand, multiplying matrices and taking determinants seem to be strange, arbitrary sequences of steps with little or no purpose.</para>
+      <para id="id9440402">A great deal of it comes together in solving linear equations. We have seen, in the chapter on simultaneous equations, how to solve two equations with two unknowns. But suppose we have three equations with three unknowns? Or four, or five? Such situations are more common than you might suppose in the real world. And even if you are allowed to use a calculator, it is not at all obvious how to solve such a problem in a reasonable amount of time.</para>
+      <para id="id10597309">Surprisingly, the things we have learned about matrix multiplication, about the identity matrix, about inverse matrices, and about matrix equality, give us a very fast way to solve such problems on a calculator!</para>
+      <para id="id10517947">Consider the following example, three equations with three unknowns:</para>
+      <equation id="element-844"><m:math>
+<m:mi>x</m:mi>
+<m:mo>+</m:mo>
+<m:mn>2</m:mn>
+<m:mi>y</m:mi>
+<m:mo>-</m:mo>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>11</m:mn>
+</m:math></equation><equation id="element-198"><m:math>
+<m:mn>2</m:mn>
+<m:mi>x</m:mi>
+<m:mo>-</m:mo>
+<m:mi>y</m:mi>
+<m:mo>+</m:mo>
+<m:mn>3</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>7</m:mn>
+</m:math></equation><equation id="element-673"><m:math>
+<m:mn>7</m:mn>
+<m:mi>x</m:mi>
+<m:mo>-</m:mo>
+<m:mn>3</m:mn>
+<m:mi>y</m:mi>
+<m:mo>-</m:mo>
+<m:mn>2</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+</m:math></equation>
+      
+      
+      <para id="id10354185">Define a 3×3 matrix [A] which is the coefficients of all the variables on the left side of the equal signs:</para>
+      <para id="id9744903"><m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} #  - 1 {} ##
+2 {} #  - 1 {} # 3 {} ##
+7 {} #  - 3 {} #  - 2{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id8002626">Define a 3×1 matrix [B] which is the numbers on the <emphasis>right</emphasis> side of the equal signs:</para>
+      <para id="id10174691"><m:math>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>2</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"11" {} ##
+7 {} ##
+2
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id9813477">Punch these matrices into your calculator, and then ask the calculator for [A-1][B]: that is, the inverse of matrix [A], multiplied by matrix [B].</para>
+      <figure id="id9794726">
+        <media id="id1166990208088" alt=""><image src="../../media/graphics1-0b1b.png" mime-type="image/png" height="67" width="100"/></media>
+      </figure>
+      <para id="id10510705">The calculator responds with a 3×1 matrix which is <emphasis>all three answers</emphasis>. In this case, 
+<m:math>
+<m:mi>x</m:mi>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+</m:math>,
+<m:math>
+<m:mi>y</m:mi>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+</m:math>, and 
+<m:math>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+</m:math>.</para>
+      <para id="id10612964">The whole process takes no longer than it takes to punch a few matrices into the calculator. And it works just as quickly for 4 equations with 4 unknowns, or 5, <emphasis>etc.</emphasis></para>
+      <section id="id10544333">
+        <title>Huh? Why the heck did that work?</title>
+        <para id="id10164522">Solving linear equations in this way is fast and easy. But with just a little work—and with the formalisms that we have developed so far about matrices—we can also show why this method works.</para>
+        <section id="id9704236">
+          <title>Step 1: In Which We Replace Three Linear Equations With One Matrix Equation</title>
+          <para id="id8617798">First of all, consider the following matrix equation:</para>
+          <para id="id10206849"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">+</m:mo><m:mn>2y</m:mn></m:mrow><m:mo stretchy="false">−</m:mo><m:mi>z</m:mi></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mrow><m:mn>2x</m:mn><m:mo stretchy="false">−</m:mo><m:mi>y</m:mi></m:mrow><m:mo stretchy="false">+</m:mo><m:mn>3z</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mn>7x</m:mn><m:mo stretchy="false">−</m:mo><m:mn>3y</m:mn></m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2z</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+x+2y - z {} ##
+2x - y+3z {} ##
+7x - 3y - 2z
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:mo>=</m:mo></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>2</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"11" {} ##
+7 {} ##
+2
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+          <para id="id8782964">The matrix on the left may <emphasis>look</emphasis> like a 3×3 matrix, but it is actually a 3×1 matrix. The top element is 
+<m:math>
+<m:mi>x</m:mi>
+<m:mo>+</m:mo>
+<m:mn>2</m:mn>
+<m:mi>y</m:mi>
+<m:mo>-</m:mo>
+<m:mi>z</m:mi>
+</m:math> (all one big number), and so on.</para>
+          <para id="id10236415">Remember what it means for two matrices to be equal to each other. They have to have the same dimensions (<media id="id1166990237834" alt=""><image src="../../media/graphics2-3794.png" mime-type="image/png" height="14" width="14"/></media>). And all <emphasis>the elements have to be equal to each other</emphasis>. So for this matrix equation to be true, all three of the following equations must be satisfied:</para>
+          <equation id="element-410"><m:math>
+<m:mi>x</m:mi>
+<m:mo>+</m:mo>
+<m:mn>2</m:mn>
+<m:mi>y</m:mi>
+<m:mo>–</m:mo>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>11</m:mn>
+</m:math></equation>
+          
+          <equation id="element-777"><m:math>
+<m:mn>2</m:mn>
+<m:mi>x</m:mi>
+<m:mo>–</m:mo>
+<m:mi>y</m:mi>
+<m:mo>+</m:mo>
+<m:mn>3</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>7</m:mn>
+</m:math></equation>
+          <equation id="element-686"><m:math>
+<m:mn>7</m:mn>
+<m:mi>x</m:mi>
+<m:mo>–</m:mo>
+<m:mn>3</m:mn>
+<m:mi>y</m:mi>
+<m:mo>–</m:mo>
+<m:mn>2</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+</m:math></equation><para id="id8502640">Look familiar? Hey, this is the three equations we started with! The point is that this <emphasis>one matrix equation</emphasis> is equivalent to those <emphasis>three linear equations</emphasis>. We can replace the original three equations with one matrix equation, and then set out to solve that.</para>
+        </section>
+        <section id="id10583564">
+          <title>Step 2: In Which We Replace a Simple Matrix Equation with a More Complicated One</title>
+          <para id="id9323367">Do the following matrix multiplication. (You will need to do this by hand—since it has variables, your calculator can’t do it for you.)</para>
+          <para id="id9989635">
+            <m:math>
+              <m:semantics>
+                <m:mrow>
+                  <m:mstyle fontsize="12pt">
+                    <m:mrow>
+                      <m:mfenced open="[" close="]">
+                        <m:mtable>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mn>1</m:mn>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mn>2</m:mn>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mn>1</m:mn>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mn>2</m:mn>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mn>1</m:mn>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mn>3</m:mn>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mn>7</m:mn>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mn>3</m:mn>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mn>2</m:mn>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                        </m:mtable>
+                      </m:mfenced>
+                    </m:mrow>
+                  </m:mstyle>
+                  <m:mrow/>
+                </m:mrow>
+                <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} #  - 1 {} ##
+2 {} #  - 1 {} # 3 {} ##
+7 {} #  - 3 {} #  - 2{}
+}  right ]} {}</m:annotation>
+              </m:semantics>
+            </m:math>
+            <m:math>
+              <m:semantics>
+                <m:mrow>
+                  <m:mstyle fontsize="12pt">
+                    <m:mrow>
+                      <m:mfenced open="[" close="]">
+                        <m:mtable>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mi>x</m:mi>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mi>y</m:mi>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mi>z</m:mi>
+                            </m:mtd>
+                          </m:mtr>
+                        </m:mtable>
+                      </m:mfenced>
+                    </m:mrow>
+                  </m:mstyle>
+                  <m:mrow/>
+                </m:mrow>
+                <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+x {} ##
+y {} ##
+z
+}  right ]} {}</m:annotation>
+              </m:semantics>
+            </m:math>
+          </para>
+          <para id="id10659681">If you did it correctly, you should have wound up with the following 3×1 matrix:</para>
+          <equation id="id9931780">
+            <m:math>
+              <m:semantics>
+                <m:mrow>
+                  <m:mstyle fontsize="12pt">
+                    <m:mrow>
+                      <m:mfenced open="[" close="]">
+                        <m:mtable>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mrow>
+                                    <m:mi>x</m:mi>
+                                    <m:mo stretchy="false">+</m:mo>
+                                    <m:mn>2y</m:mn>
+                                  </m:mrow>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mi>z</m:mi>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mrow>
+                                    <m:mn>2x</m:mn>
+                                    <m:mo stretchy="false">−</m:mo>
+                                    <m:mi>y</m:mi>
+                                  </m:mrow>
+                                  <m:mo stretchy="false">+</m:mo>
+                                  <m:mn>3z</m:mn>
+                                </m:mrow>
+                                <m:mrow/>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                          <m:mtr>
+                            <m:mtd>
+                              <m:mrow>
+                                <m:mrow>
+                                  <m:mn>7x</m:mn>
+                                  <m:mo stretchy="false">−</m:mo>
+                                  <m:mn>3y</m:mn>
+                                </m:mrow>
+                                <m:mo stretchy="false">−</m:mo>
+                                <m:mn>2z</m:mn>
+                              </m:mrow>
+                            </m:mtd>
+                          </m:mtr>
+                        </m:mtable>
+                      </m:mfenced>
+                    </m:mrow>
+                  </m:mstyle>
+                  <m:mrow/>
+                </m:mrow>
+                <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+x+2y - z {} ##
+2x - y+3z {} ##
+7x - 3y - 2z
+}  right ]} {}</m:annotation>
+              </m:semantics>
+            </m:math>
+          </equation>
+          <para id="id9825936">Once again, we pause to say…hey, that looks familiar! Yes, it’s the matrix that we used in Step 1. So we can now rewrite the <emphasis>matrix equation</emphasis> from Step 1 in this way:</para>
+          <para id="id10265820"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} #  - 1 {} ##
+2 {} #  - 1 {} # 3 {} ##
+7 {} #  - 3 {} #  - 2{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>x</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>y</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mi>z</m:mi></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+x {} ##
+y {} ##
+z
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:mo>=</m:mo></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>2</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"11" {} ##
+7 {} ##
+2
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+          <para id="id2914053">Stop for a moment and make sure you’re following all this. I have shown, in two separate steps, that this <emphasis>matrix equation</emphasis> is equivalent to the three <emphasis>linear equations</emphasis> that we started with.</para>
+          <para id="id9931635">But this matrix equation has a nice property that the previous one did not. The first matrix (which we called [A] a long time ago) and the third one ([B]) contain only numbers. If we refer to the middle matrix as [X] then we can write our equation more concisely:</para>
+          <para id="id8938593"><m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math>, where 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} #  - 1 {} ##
+2 {} #  - 1 {} # 3 {} ##
+7 {} #  - 3 {} #  - 2{}
+}  right ]} {}</m:annotation></m:semantics></m:math>, <m:math>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>x</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>y</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mi>z</m:mi></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+x {} ##
+y {} ##
+z
+}  right ]} {}</m:annotation></m:semantics></m:math>, and <m:math>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>2</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"11" {} ##
+7 {} ##
+2
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+          <para id="id9563575">Most importantly, <m:math>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+</m:math> contains the three variables we want to solve for! If we can solve this equation for <m:math>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+</m:math> we will have found our three variables <m:math>
+<m:mi>x</m:mi>
+</m:math>, 
+<m:math>
+<m:mi>y</m:mi>
+</m:math>, and <m:math>
+<m:mi>z</m:mi>
+</m:math>.</para>
+        </section>
+        <section id="id6610550"><title>Step 3: In Which We Solve a Matrix Equation</title>
+          
+          <para id="id10439671">We have rewritten our original equations as 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math>, and redefined our original goal as “solve this matrix equation for <m:math><m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+</m:math>.” If these were numbers, we would divide both sides by 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math>. But these are matrices, and we have never defined a division operation for matrices. Fortunately, we can do something just as good, which is <emphasis>multiplying both sides </emphasis>by <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+</m:math>. (Just as, with numbers, you can replace “dividing by 3” with “multiplying by 
+<m:math>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mn>3</m:mn>
+</m:mfrac>
+</m:math>.”)</para>
+          <table id="id7968998" summary="">
+<tgroup cols="2"><colspec colnum="1" colname="c1"/>
+              <colspec colnum="2" colname="c2"/>
+              <thead>
+                <row>
+                  <entry namest="c1" nameend="c2">Solving a Matrix Equation</entry>
+                </row>
+</thead>
+<tbody>
+                <row>
+                  <entry><m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math></entry>
+                  <entry>
+                    <emphasis>The problem.</emphasis>
+                  </entry>
+                </row>
+                <row>
+                  <entry><m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math></entry>
+                  <entry>
+                    <emphasis>Multiply both sides by <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup></m:math>, on the left. (Remember order matters! If we multiplied by <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup></m:math> on the right, that would be doing something different.)</emphasis>
+                  </entry>
+                </row>
+                <row>
+                  <entry><m:math>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math></entry>
+                  <entry>
+                    <emphasis>
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo></m:math> by the definition of an inverse matrix.</emphasis>
+                  </entry>
+                </row>
+                <row>
+                  <entry><m:math>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math></entry>
+                  <entry>
+                    <emphasis><m:math>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+</m:math> times anything is itself, by definition of the identity matrix.</emphasis>
+                  </entry>
+                </row>
+              </tbody>
+            
+
+
+</tgroup>
+</table>
+          <para id="id9143900">So we’re done! <m:math>
+<m:mo>[</m:mo>
+<m:mi>X</m:mi>
+<m:mo>]</m:mo>
+</m:math>, which contains exactly the variables we are looking for, has been shown to be <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math>. This is why we can punch that formula into our calculator and find the answers instantly.</para>
+        </section>
+      </section>
+      <section id="id10282663">
+        <title>Let’s try one more example</title>
+        
+        <equation id="element-973"><m:math>
+<m:mn>5</m:mn>
+<m:mi>x</m:mi>
+<m:mo>–</m:mo>
+<m:mn>3</m:mn>
+<m:mi>y</m:mi>
+<m:mo>–</m:mo>
+<m:mn>2</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>4</m:mn>
+</m:math></equation>
+        <equation id="element-625"><m:math>
+<m:mi>x</m:mi>
+<m:mo>+</m:mo>
+<m:mi>y</m:mi>
+<m:mo>–</m:mo>
+<m:mn>7</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>7</m:mn>
+</m:math></equation>
+        <equation id="element-175"><m:math>
+<m:mn>10</m:mn>
+<m:mi>x</m:mi>
+<m:mo>–</m:mo>
+<m:mn>6</m:mn>
+<m:mi>y</m:mi>
+<m:mo>–</m:mo>
+<m:mn>4</m:mn>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mn>10</m:mn>
+</m:math></equation><para id="id7709644">We don’t have to derive the formula again—we can just use it. Enter the following into your calculator:</para>
+        <para id="id9506550"><m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>2</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>7</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>6</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>4</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+5 {} #  - 3 {} #  - 2 {} ##
+1 {} # 1 {} #  - 7 {} ##
+"10" {} #  - 6 {} #  - 4{}
+}  right ]} {}</m:annotation></m:semantics></m:math> 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mtext>10</m:mtext></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+4 {} ##
+7 {} ##
+"10"
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+        <para id="id10440451">Then ask the calculator for <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup><m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math>.</para>
+        <figure id="id10590814"><media id="id1166990183141" alt="A screen shot of a graphic calculator."><image src="../../media/graphics3-ce2e.png" mime-type="image/png" print-width="3in"/></media></figure>
+        <para id="id9453568">The result?</para>
+        <figure id="id8607452"><media id="id1166990183181" alt="A screen shot of a graphic calculator."><image src="../../media/graphics4-1112.png" mime-type="image/png" print-width="3in"/></media></figure>
+        <para id="id9237284">What happened? To understand this error, try the following:</para>
+        <para id="id7546381">Hit <code display="inline">ENTER</code> to get out of the error, and then hit <code display="inline">&lt;MATRX&gt;</code> ► <code display="inline">1 &lt;MATRX&gt; 1 ) ENTER</code></para>
+        <figure id="id10219665"><media id="id1166990183254" alt="A screen shot of a graphic calculator."><image src="../../media/graphics5-4bad.png" mime-type="image/png" print-width="3in"/></media></figure>
+        <para id="id10513854">Aha! Matrix <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math> has a determinant of 0. <emphasis>A matrix with 0 determinant has no inverse. </emphasis>So the operation you asked the calculator for, <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup><m:mo>[</m:mo>
+<m:mi>B</m:mi>
+<m:mo>]</m:mo>
+</m:math>, is impossible.</para>
+        <para id="id10586251">What does this tell us about our original equations? They have no solution. To see why this is so, double the first equation and compare it with the third—it should become apparent that both equations cannot be true at the same time.</para>
+      </section>
+
+  </content>
+</document>

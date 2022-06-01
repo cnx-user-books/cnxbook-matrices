@@ -1,0 +1,460 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- Multiplying Matrices</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18291</md:content-id>
+  <md:title>Matrix Concepts -- Multiplying Matrices</md:title>
+  <md:abstract>This module covers multiplication of matrices.</md:abstract>
+  <md:uuid>033d2734-6a0d-4851-a189-b2549a487c11</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/algebra-2/u/matrices/t/matrix-multiplication" strength="3">Matrix Multiplication Video</link>
+      <link url="http://www.brightstorm.com/d/math/s/algebra-2/u/matrices/t/matrix-operations" strength="3">Matrix Operations Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    <section id="id9731130">
+      <title>Multiplying a Row Matrix by a Column Matrix</title>
+      <para id="id11343626">A “row matrix” means a matrix with only one row. A “column matrix” means a matrix with only one column. When a row matrix has the same number of elements as a column matrix, they can be multiplied. So the following is a perfectly <emphasis>legal</emphasis> matrix multiplication problem:</para>
+      <para id="id11009375"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} # 4{}
+}  right ]} {}</m:annotation></m:semantics><m:mo>x</m:mo>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr><m:mtd><m:mn>10</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>20</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>30</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>40</m:mn></m:mtd></m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+</m:math></para>
+      <para id="id10038010">These two matrices could not be added, of course, since their dimensions are different, but they <emphasis>can </emphasis>be multiplied. Here’s how you do it. You multiply the first (left-most) item in the row, by the first (top) item in the column. Then you do the same for the second items, and the third items, and so on. Finally, you <emphasis>add</emphasis> all these products to produce the final number.</para>
+      <figure id="id12163822"><media id="id27413803" alt="A picture illustrating how to multiply a matrix. In this example a 1x4 matrix is multiplied by a 4x1 matrix."><image src="../../media/graphics2-8212.png" mime-type="image/png" print-width="3in"/></media></figure>
+      <para id="id10677134">A couple of my students (Nakisa Asefnia and Laura Parks) came up with an ingenious trick for visualizing this process. Think of the row as a dump truck, backing up to the column dumpster. When the row dumps its load, the numbers line up with the corresponding numbers in the column, like so:</para>
+      <figure id="id3867005"><media id="id27413843" alt="A picture illustrating how to multiply a matrix. In this example a 1x4 matrix is multiplied by a 4x1 matrix."><image src="../../media/graphics3-4228.png" mime-type="image/png" print-width="3in"/></media></figure>
+      <para id="id12959712">So, without the trucks and dumpsters, we express the result—a row matrix, times a column matrix—like this:</para>
+      <para id="id8769541"><m:math>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>2</m:mn></m:mtd>
+<m:mtd><m:mn>3</m:mn></m:mtd>
+<m:mtd><m:mn>4</m:mn></m:mtd>
+</m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr><m:mtd><m:mn>10</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>20</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>30</m:mn></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mn>40</m:mn></m:mtd></m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr><m:mtd><m:mn>300</m:mn></m:mtd></m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+</m:math></para>
+      <para id="id12149312">There are several subtleties to note about this operation.</para>
+      <list id="id4397117" list-type="bulleted"><item>The picture is a bit deceptive, because it might appear that you are multiplying two columns. In fact, <emphasis>you cannot multiply a column matrix by a column matrix</emphasis>. We are multiplying a row matrix by a column matrix. The picture of the <emphasis>row</emphasis> matrix “dumping down” only demonstrates which numbers to multiply.</item>
+        <item>The answer to this problem is not a number: it is a 1-by-1 matrix.</item>
+        <item>The multiplication can only be performed if the <emphasis>number of elements</emphasis> in each matrix is the same. (In this example, each matrix has 4 elements.)</item>
+        <item>Order matters! We are multiplying a <emphasis>row matrix times a column matrix</emphasis>, not the other way around.</item>
+      </list>
+      <para id="id12960923">It’s important to practice a few of these, and get the hang of it, before you move on.</para>
+    </section>
+    <section id="id10089249">
+      <title>Multiplying Matrices in General</title>
+      <para id="id12972660">The general algorithm for multiplying matrices is built on the row-times-column operation discussed above. Consider the following example:</para>
+      <para id="id9728728">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mstyle fontsize="12pt">
+                <m:mrow>
+                  <m:mfenced open="[" close="]">
+                    <m:mtable>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>5</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>6</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>7</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>8</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>9</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>10</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>11</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>12</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                    </m:mtable>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mstyle>
+              <m:mrow/>
+            </m:mrow>
+            <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6 {} ##
+7 {} # 8 {} # 9 {} ##
+"10" {} # "11" {} # "12"{}
+}  right ]} {}</m:annotation>
+          </m:semantics>
+        </m:math>
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mstyle fontsize="12pt">
+                <m:mrow>
+                  <m:mfenced open="[" close="]">
+                    <m:mtable>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>10</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>40</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>20</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>50</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>30</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>60</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                    </m:mtable>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mstyle>
+              <m:mrow/>
+            </m:mrow>
+            <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"10" {} # "40" {} ##
+"20" {} # "50" {} ##
+"30" {} # "60"{}
+}  right ]} {}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </para>
+      <para id="id9237021">The key to such a problem is to think of the first matrix as a list of <emphasis>rows</emphasis> (in this case, 4 rows), and the second matrix as a list of <emphasis>columns</emphasis> (in this case, 2 columns). You are going to multiply each <emphasis>row</emphasis> in the first matrix, by each <emphasis>column</emphasis> in the second matrix. In each case, you will use the “dump truck” method illustrated above.</para>
+      <para id="id9982998">Start at the beginning: first row, times first column.</para>
+      <para id="id12284842"><media id="id27388676" alt="A picture showing the first step in multiplying matrices."><image src="../../media/gr1.PNG" mime-type="image/png" print-width="3in"/></media></para>
+      <para id="id10296213">Now, move <emphasis>down</emphasis> to the next row. As you do so, move <emphasis>down</emphasis> in the answer matrix as well.</para>
+      <para id="id12157902"><media id="id27388726" alt="A picture showing the second step in multiplying matrices."><image src="../../media/gr2.PNG" mime-type="image/png" print-width="3in"/></media></para>
+      <para id="id9656717">Now, move down the rows in the first matrix, multiplying each one by that same column on the right. List the numbers below each other.</para>
+      <para id="id10670493"><media id="id27388766" alt="A picture showing the following steps in multiplying matrices."><image src="../../media/gr3.PNG" mime-type="image/png" print-width="3in"/></media></para>
+      <para id="id12973864">The <emphasis>first column</emphasis> of the second matrix has become the <emphasis>first column</emphasis> of the answer. We now move on to the <emphasis>second column</emphasis> and repeat the entire process, starting with the first row.</para>
+      <para id="id9576979"><media id="id27388830" alt="A picture showing the following steps in multiplying matrices for the second row."><image src="../../media/gr4.PNG" mime-type="image/png" print-width="3in"/></media></para>
+      <para id="id10119447">And so on, working our way once again through all the rows in the first matrix.</para>
+      <para id="id10749999"><media id="id27558795" alt="A picture showing the first step in multiplying matrices."><image src="../../media/gr5.PNG" mime-type="image/png" print-width="3in"/></media></para>
+      <para id="id8656938">We’re done. We can summarize the results of this entire operation as follows:</para>
+      <para id="id4335990"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>9</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>12</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6 {} ##
+7 {} # 8 {} # 9 {} ##
+"10" {} # "11" {} # "12"{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>40</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>20</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>50</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>30</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>60</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"10" {} # "40" {} ##
+"20" {} # "50" {} ##
+"30" {} # "60"{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:mo>=</m:mo></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>140</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>320</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>320</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>770</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>500</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>1220</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>680</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>1670</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"140" {} # "320" {} ##
+"320" {} # "770" {} ##
+"500" {} # "1220" {} ##
+"680" {} # "1670"{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id12412283">It’s a strange and ugly process—but everything we’re going to do in the rest of this unit builds on this, so it’s vital to be comfortable with this process. <emphasis>The only way to become comfortable with this process is to do it. A lot.</emphasis> Multiply a lot of matrices until you are confident in the steps.</para>
+      <para id="id13348951">Note that we could add more rows to the first matrix, and that would add more rows to the answer. We could add more <emphasis>columns </emphasis>to the second matrix, and that would add more columns to the answer. However—if we added a column to the first matrix, or added a row to the second matrix, we would have an illegal multiplication. As an example, consider what happens if we try to do this multiplication in reverse:</para>
+      <para id="id11496047">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mstyle fontsize="12pt">
+                <m:mrow>
+                  <m:mfenced open="[" close="]">
+                    <m:mtable>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>10</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>40</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>20</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>50</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>30</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>60</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                    </m:mtable>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mstyle>
+              <m:mrow/>
+            </m:mrow>
+            <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"10" {} # "40" {} ##
+"20" {} # "50" {} ##
+"30" {} # "60"{}
+}  right ]} {}</m:annotation>
+          </m:semantics>
+        </m:math>
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mstyle fontsize="12pt">
+                <m:mrow>
+                  <m:mfenced open="[" close="]">
+                    <m:mtable>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>5</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>6</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>7</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>8</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mn>9</m:mn>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>10</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>11</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>12</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                    </m:mtable>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mstyle>
+              <m:mrow/>
+            </m:mrow>
+            <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6 {} ##
+7 {} # 8 {} # 9 {} ##
+"10" {} # "11" {} # "12"{}
+}  right ]} {}</m:annotation>
+          </m:semantics>
+        </m:math>
+        <emphasis>Illegal multiplication</emphasis>
+      </para>
+      <para id="id10516104">If we attempt to multiply these two matrices, we start (as always) with the first row of the first matrix, times the first column of the second matrix: 
+<m:math>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr><m:mtd><m:mn>10</m:mn></m:mtd>
+<m:mtd><m:mn>40</m:mn></m:mtd></m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+</m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mtext>10</m:mtext></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} ##
+4 {} ##
+7 {} ##
+"10"
+}  right ]} {}</m:annotation></m:semantics></m:math>. But this is an illegal multiplication; the items don’t line up, since there are two elements in the row and four in the column. So you cannot multiply these two matrices.</para>
+      <para id="id7734587">This example illustrates two vital properties of matrix multiplication.</para>
+      <list id="id13775361" list-type="bulleted">
+        <item>The number of columns in the first matrix, and the number of rows in the second matrix, must be equal. Otherwise, you cannot perform the multiplication.</item>
+        <item>Matrix multiplication is not <emphasis>commutative</emphasis>—which is a fancy way of saying, order matters. If you reverse the order of a matrix multiplication, you may get a different answer, or you may (as in this case) get no answer at all.</item>
+      </list>
+    </section>
+  </content>
+</document>

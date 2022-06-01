@@ -1,0 +1,198 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- Explanations</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18311</md:content-id>
+  <md:title>Matrix Concepts -- Explanations</md:title>
+  <md:abstract>This module introduces basic properties of matrices: concepts, multiplication by a constant, addition and subtraction, and setting two matrices equal to one another.</md:abstract>
+  <md:uuid>020fa4ae-2886-42d8-9453-d230c8ddeb9b</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/algebra-2/u/matrices/t/introduction-to-matrices" strength="3">Introduction to Matrices Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    <section id="id8218578">
+      <title>Conceptual Explanations: Matrices</title>
+      <para id="id8780887">A “matrix” is a grid, or table, of numbers. For instance, the following matrix represents the prices at the store “Nuthin’ But Bed Stuff.”</para>
+      <table id="id5538452" summary="">
+<tgroup cols="4"><colspec colnum="1" colname="header_c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <colspec colnum="3" colname="c3"/>
+          <colspec colnum="4" colname="c4"/>
+<thead>
+<row>
+              <entry/>
+              <entry>King-sized</entry>
+              <entry>Queen-sized</entry>
+              <entry>Twin</entry>
+            </row>
+</thead>          
+<tbody>
+            
+            <row>
+              <entry>Mattress</entry>
+              <entry>$649</entry>
+              <entry>$579</entry>
+              <entry>$500</entry>
+            </row>
+            <row>
+              <entry>Box spring</entry>
+              <entry>$350</entry>
+              <entry>$250</entry>
+              <entry>$200</entry>
+            </row>
+            <row>
+              <entry>Fitted sheet</entry>
+              <entry>$15</entry>
+              <entry>$12</entry>
+              <entry>$10</entry>
+            </row>
+            <row>
+              <entry>Top sheet</entry>
+              <entry>$15</entry>
+              <entry>$12</entry>
+              <entry>$10</entry>
+            </row>
+            <row>
+              <entry>Blanket</entry>
+              <entry>$20</entry>
+              <entry>$20</entry>
+              <entry>$15</entry>
+            </row>
+          </tbody>
+        
+</tgroup>
+</table>
+      <para id="id9656315">(The matrix is the numbers, not the words that label them.)</para>
+      <para id="id8058318">Of course, these prices could be displayed in a simple list: “King-sized mattress,” “Queen-sized mattress,” and so on. However, this two-dimensional display makes it much easier to compare the prices of mattresses to box springs, or the prices of king-sized items to queen-sized items, for instance.</para>
+      <para id="id9265034">Each horizontal list of numbers is referred to as a <emphasis>row;</emphasis> each vertical list is a <emphasis>column.</emphasis> Hence, the list of all mattresses is a row; the list of all king-sized prices is a column. (It’s easy to remember which is which if you think of Greek columns, which are big posts that hold up buildings and are very tall and...well, you know...vertical.) This particular matrix has 5 rows and 3 columns. It is therefore referred to as a 5×3 (read, “5 by 3”) matrix.</para>
+      <para id="id8690954">If a matrix has the same number of columns as rows, it is referred to as a <emphasis>square matrix</emphasis>.</para>
+    </section>
+    <section id="id8811464">
+      <title>Adding and Subtracting Matrices</title>
+      <para id="id5607262">Adding matrices is very simple. You just add each number in the first matrix, to the corresponding number in the second matrix.</para>
+      <para id="id8683729"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:mo>+</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>60</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>50</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>40</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>30</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>20</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"60" {} # "50" {} # "40" {} ##
+"30" {} # "20" {} # "10"{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>61</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>52</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>43</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>34</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>25</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>16</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"61" {} # "52" {} # "43" {} ##
+"34" {} # "25" {} # "16"{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id7555362">For instance, for the upper-right-hand corner, the calculation was 
+<m:math>
+<m:mn>3</m:mn>
+<m:mo>+</m:mo>
+<m:mn>40</m:mn>
+<m:mo>=</m:mo>
+<m:mn>43</m:mn>
+</m:math>. Note that both matrices being added are 2×3, and the resulting matrix is also 2×3. <emphasis>You cannot add two matrices that have different dimensions.</emphasis></para>
+      <para id="id8209907">As you might guess, subtracting works much the same way, except that you subtract instead of adding.</para>
+      <para id="id8918026"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>60</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>50</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>40</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>30</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>20</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"60" {} # "50" {} # "40" {} ##
+"30" {} # "20" {} # "10"{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>–</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>59</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>48</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>37</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>26</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>15</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"59" {} # "48" {} # "37" {} ##
+"26" {} # "15" {} # 4{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id7598844">Once again, note that the resulting matrix has the same dimensions as the originals, and that <emphasis>you cannot subtract two matrices that have different dimensions.</emphasis></para>
+    </section>
+    <section id="id8795622">
+      <title>Multiplying a Matrix by a Constant</title>
+      <para id="id6997885">What does it mean to multiply a number by 3? It means you add the number to itself 3 times.</para>
+      <para id="id7028648">Multiplying a <emphasis>matrix </emphasis>by 3 means the same thing...you add the matrix to itself 3 times.</para>
+      <para id="id8464678"><m:math><m:mn>3</m:mn></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>+</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>+</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>9</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>12</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>15</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>18</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 6 {} # 9 {} ##
+"12" {} # "15" {} # "18"{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id5597273">Note what has happened: each element in the original matrix has been multiplied by 3. Hence, we arrive at the method for multiplying a matrix by a constant: you multiply each element by that constant. The resulting matrix has the same dimensions as the original.</para>
+      <para id="id9216240"><m:math><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:math>
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+ {  {1}  over  {2} }  {} # 1 {} #  {  {3}  over  {2} }  {} ##
+2 {} #  {  {5}  over  {2} }  {} # 3{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+    </section>
+    <section id="id9407060">
+      <title>Matrix Equality</title>
+      <para id="id7373939">For two matrices to be “equal” they must be exactly the same. That is, they must have the same dimensions, and each element in the first matrix must be equal to the corresponding element in the second matrix.</para>
+      <para id="id7145555">For instance, consider the following matrix equation.</para>
+      <para id="id5584999"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">+</m:mo><m:mi>y</m:mi></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>12</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # x+y {} ##
+"12" {} # "10"{}
+}  right ]} {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>18</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">−</m:mo><m:mi>y</m:mi></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # "18" {} ##
+x - y {} # "10"{}
+}  right ]} {}</m:annotation></m:semantics></m:math></para>
+      <para id="id7297889">Both matrices have the same dimensions. And the upper-left and lower-right elements are definitely the same.</para>
+      <para id="id7633744">But for the matrix to be equal, we also need the other two elements to be the same. So</para>
+      <para id="id8156708"><m:math>
+<m:mi>x</m:mi>
+<m:mo>+</m:mo>
+<m:mi>y</m:mi>
+<m:mo>=</m:mo>
+<m:mn>18</m:mn>
+</m:math></para>
+      <para id="id8156712"><m:math>
+<m:mi>x</m:mi>
+<m:mo>–</m:mo>
+<m:mi>y</m:mi>
+<m:mo>=</m:mo>
+<m:mn>12</m:mn>
+</m:math></para>
+      <para id="id9650467">Solving these two equations (for instance, by elimination) we find that 
+<m:math>
+<m:mi>x</m:mi>
+<m:mo>=</m:mo>
+<m:mn>15</m:mn>
+</m:math>, 
+<m:math>
+<m:mi>y</m:mi>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+</m:math>.</para>
+      <para id="id6354287">You may notice an analogy here to complex numbers. When we assert that two complex numbers equal each other, we are actually making two statements: the <emphasis>real</emphasis> parts are equal, and the <emphasis>imaginary</emphasis> parts are equal. In such a case, we can use one equation to solve for two unknowns. A very similar situation exists with matrices, except that one equation actually represents <emphasis>many more</emphasis> statements. For 2×2 matrices, setting them equal makes four separate statements; for 2×3 matrices, six separate statements; and so on.</para>
+      <para id="id9742968">
+        <emphasis>OK, take a deep breath. Even if you’ve never seen a matrix before, the concept is not too difficult, and everything we’ve seen so far should be pretty simple, if not downright obvious.</emphasis>
+      </para>
+      <para id="id8823991">
+        <emphasis>Let that breath out now. This is where it starts to get weird.</emphasis>
+      </para>
+    </section>
+  </content>
+</document>

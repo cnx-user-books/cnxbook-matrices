@@ -1,0 +1,686 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- The Inverse Matrix</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18294</md:content-id>
+  <md:title>Matrix Concepts -- The Inverse Matrix</md:title>
+  <md:abstract>This module introduces the inverse matrix and its properties.</md:abstract>
+  <md:uuid>af2ce775-9674-4820-9e3c-bc43e5f89065</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/the-inverse-of-a-square-matrix" strength="3">Square Matrix Inverse Video</link>
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/invertible-square-matrices-and-determinants" strength="3">Invertible Square Matrix Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+      <para id="id6814775">We have seen that the number 1 plays a special role in multiplication, because 
+<m:math>
+<m:mn>1</m:mn>
+<m:mi>x</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+</m:math>.</para>
+      <para id="id6814786">The <emphasis>inverse of a number</emphasis> is defined as the number that multiplies by that number to give 1: <m:math><m:mi>b</m:mi></m:math> is the inverse of <m:math>
+<m:mi>a</m:mi>
+</m:math> if 
+<m:math>
+<m:mi>a</m:mi>
+<m:mi>b</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:math>. Hence, the inverse of <m:math>
+<m:mn>3</m:mn>
+</m:math> is 
+<m:math>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mn>3</m:mn>
+</m:mfrac>
+</m:math>; the inverse of 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfrac><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>5</m:mn></m:mrow><m:mn>8</m:mn></m:mfrac></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {  { - 5}  over  {8} } } {}</m:annotation></m:semantics></m:math> <m:math><m:mo>=</m:mo></m:math> 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfrac><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>8</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {  { - 8}  over  {5} } } {}</m:annotation></m:semantics></m:math>. Every number except 0 has an inverse.</para>
+      <para id="id6821552">By analogy, the<emphasis> inverse of a matrix</emphasis> multiplies by that matrix to give the identity matrix.</para>
+      <para id="id6821563"><title>Definition of Inverse Matrix </title>The <emphasis>inverse of matrix</emphasis> 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+</m:math>, designated as 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>-1</m:mn>
+</m:msup>
+</m:math>, is defined by the property:
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>-1</m:mn>
+</m:msup>
+<m:mo>=</m:mo> 
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>-1</m:mn>
+</m:msup>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+</m:math></para>
+      <para id="id6587606">The superscript –1 is being used here in a similar way to its use in functions. Recall that 
+<m:math>
+<m:msup>
+<m:mi>f</m:mi>
+<m:mn>–1</m:mn>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>x</m:mn>
+<m:mo>)</m:mo>
+</m:math> does not designate an exponent of any kind, but instead, an inverse function. In the same way, 
+<m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:msup>
+<m:mo>]</m:mo>
+<m:mn>–1</m:mn>
+</m:msup>
+</m:math> does not denote an exponent, but an inverse <emphasis>matrix</emphasis>.</para>
+      <para id="id6587654">Note that, just as in the definition of the identity matrix, this definition requires commutativity—the multiplication must work the same in either order.</para>
+      <para id="id6587664">Note also that only square matrices can have an inverse. Why? The definition of an inverse matrix is <emphasis>based on</emphasis> the identity matrix <m:math>
+<m:mo>[</m:mo>
+<m:mi>I</m:mi>
+<m:mo>]</m:mo>
+</m:math>, and we already said that only square matrices even <emphasis>have </emphasis>an identity!</para>
+      <para id="id6587690">How do you <emphasis>find</emphasis> an inverse matrix? The method comes directly from the definition, with a little algebra.</para>
+      <table id="id6587703" summary="">
+<tgroup cols="2"><colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+         <thead>
+            <row>
+              <entry namest="c1" nameend="c2">Example: Finding an Inverse Matrix</entry>
+            </row>
+</thead>
+ <tbody>
+            <row>
+              <entry>Find the inverse of 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 4 {} ##
+5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>The problem</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 4 {} ##
+5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>a</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>b</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>c</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>d</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+a {} # b {} ##
+c {} # d{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>This is the key step. It establishes </emphasis>
+                <emphasis>
+                  <m:math>
+                    <m:semantics>
+                      <m:mrow>
+                        <m:mstyle fontsize="12pt">
+                          <m:mrow>
+                            <m:mfenced open="[" close="]">
+                              <m:mtable>
+                                <m:mtr>
+                                  <m:mtd>
+                                    <m:mrow>
+                                      <m:mi>a</m:mi>
+                                      <m:mrow/>
+                                    </m:mrow>
+                                  </m:mtd>
+                                  <m:mtd>
+                                    <m:mrow>
+                                      <m:mi>b</m:mi>
+                                      <m:mrow/>
+                                    </m:mrow>
+                                  </m:mtd>
+                                </m:mtr>
+                                <m:mtr>
+                                  <m:mtd>
+                                    <m:mrow>
+                                      <m:mi>c</m:mi>
+                                      <m:mrow/>
+                                    </m:mrow>
+                                  </m:mtd>
+                                  <m:mtd>
+                                    <m:mrow>
+                                      <m:mi>d</m:mi>
+                                      <m:mrow/>
+                                    </m:mrow>
+                                  </m:mtd>
+                                </m:mtr>
+                              </m:mtable>
+                            </m:mfenced>
+                          </m:mrow>
+                        </m:mstyle>
+                        <m:mrow/>
+                      </m:mrow>
+                      <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+a {} # b {} ##
+c {} # d{}
+}  right ]} {}</m:annotation>
+                    </m:semantics>
+                  </m:math>
+                </emphasis>
+                <emphasis> as the inverse that we are looking for, by asserting that it fills the definition of an inverse matrix: when you multiply this mystery matrix by our original matrix, you get [I]. When we solve for the four variables a, b, c, and d, we will have found our inverse matrix.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mrow><m:mn>3a</m:mn><m:mo stretchy="false">+</m:mo><m:mn>4c</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mn>3b</m:mn><m:mo stretchy="false">+</m:mo><m:mn>4d</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mn>5a</m:mn><m:mo stretchy="false">+</m:mo><m:mn>6c</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mn>5b</m:mn><m:mo stretchy="false">+</m:mo><m:mn>6d</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3a+4c {} # 3b+4d {} ##
+5a+6c {} # 5b+6d{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>Do the multiplication. (You should check this step for yourself, it’s great practice. For instance, you start by multiplying first row x first column, and you get 3a+4c.)</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<m:math>
+<m:mn>3</m:mn>
+<m:mi>a</m:mi>
+<m:mo>+</m:mo>
+<m:mn>4</m:mn>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mspace width="15pt"/>
+<m:mn>3</m:mn>
+<m:mi>b</m:mi>
+<m:mo>+</m:mo>
+<m:mn>4</m:mn>
+<m:mi>d</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mspace width="15pt"/>
+<m:mn>5</m:mn>
+<m:mi>a</m:mi>
+<m:mo>+</m:mo>
+<m:mn>6</m:mn>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mspace width="15pt"/>
+<m:mn>5</m:mn>
+<m:mi>b</m:mi>
+<m:mo>+</m:mo>
+<m:mn>6</m:mn>
+<m:mi>d</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:math></entry>
+              <entry>
+                <emphasis>Remember what it means for two matrices to be equal: every element in the left must equal its corresponding element on the right. So, for these two matrices to equal each other, all four of these equations must hold.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+<m:math>
+<m:mi>a</m:mi>
+<m:mo>=</m:mo>
+<m:mn>–3</m:mn>
+<m:mspace width="15pt"/>
+<m:mi>b</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mspace width="15pt"/>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+</m:mfrac>
+<m:mspace width="15pt"/>
+<m:mi>d</m:mi>
+<m:mo>=</m:mo>
+<m:mn>–1</m:mn>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+</m:mfrac>
+</m:math></entry>
+              <entry>
+                <emphasis>Solve the first two equations for a and c by using either elimination or substitution. Solve the second two equations for <m:math><m:mi>b</m:mi>
+</m:math> and 
+<m:math>
+<m:mi>d</m:mi>
+</m:math> by using either elimination or substitution. (The steps are not shown here.)</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>So the inverse is:
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>3</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>1</m:mn></m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+ - 3 {} # 2 {} ##
+2 {  {1}  over  {2} }  {} #  - 1 {  {1}  over  {2} } {}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>Having found the four variables, we have found the inverse.</emphasis>
+              </entry>
+            </row>
+          </tbody>
+        
+</tgroup>
+</table>
+      <para id="id7897806"><emphasis>Did it work?</emphasis> Let’s find out.</para>
+      <table id="id7897818" summary="This table shows how to test to see if a matrix is in fact the inverse of another.">
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <thead>
+            <row>
+              <entry namest="c1" nameend="c2">Testing our Inverse Matrix</entry>
+            </row>
+</thead>
+<tbody>
+            <row>
+              <entry>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mn>3</m:mn>
+                                    </m:mrow>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>2</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>2</m:mn>
+                                    <m:mfrac>
+                                      <m:mn>1</m:mn>
+                                      <m:mn>2</m:mn>
+                                    </m:mfrac>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mn>1</m:mn>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                      <m:mn>1</m:mn>
+                                      <m:mn>2</m:mn>
+                                    </m:mfrac>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+ - 3 {} # 2 {} ##
+2 {  {1}  over  {2} }  {} #  - 1 {  {1}  over  {2} } {}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>3</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>4</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>5</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>6</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 4 {} ##
+5 {} # 6{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <media id="id1166889873263" alt=""><image src="../../media/graphics1-cb69.png" mime-type="image/png"/></media>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+              </entry>
+              <entry>
+                <emphasis>The definition of an inverse matrix: if we have indeed found an inverse, then when we multiply it by the original matrix, we should get [I].</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">(</m:mo>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mn>3</m:mn>
+                                    </m:mrow>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>3</m:mn>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mo stretchy="false">+</m:mo>
+                                      <m:mo stretchy="false">(</m:mo>
+                                    </m:mrow>
+                                    <m:mn>2</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>5</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">(</m:mo>
+                                      <m:mo stretchy="false">−</m:mo>
+                                      <m:mn>3</m:mn>
+                                    </m:mrow>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>4</m:mn>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mo stretchy="false">+</m:mo>
+                                      <m:mo stretchy="false">(</m:mo>
+                                    </m:mrow>
+                                    <m:mn>2</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mfenced open="(" close=")">
+                                      <m:mrow>
+                                        <m:mn>2</m:mn>
+                                        <m:mfrac>
+                                          <m:mn>1</m:mn>
+                                          <m:mn>2</m:mn>
+                                        </m:mfrac>
+                                      </m:mrow>
+                                    </m:mfenced>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>3</m:mn>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mo stretchy="false">+</m:mo>
+                                      <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                          <m:mrow>
+                                            <m:mo stretchy="false">−</m:mo>
+                                            <m:mn>1</m:mn>
+                                          </m:mrow>
+                                          <m:mfrac>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>2</m:mn>
+                                          </m:mfrac>
+                                        </m:mrow>
+                                      </m:mfenced>
+                                    </m:mrow>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>5</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mfenced open="(" close=")">
+                                      <m:mrow>
+                                        <m:mn>2</m:mn>
+                                        <m:mfrac>
+                                          <m:mn>1</m:mn>
+                                          <m:mn>2</m:mn>
+                                        </m:mfrac>
+                                      </m:mrow>
+                                    </m:mfenced>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>4</m:mn>
+                                    <m:mrow>
+                                      <m:mo stretchy="false">)</m:mo>
+                                      <m:mo stretchy="false">+</m:mo>
+                                      <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                          <m:mrow>
+                                            <m:mo stretchy="false">−</m:mo>
+                                            <m:mn>1</m:mn>
+                                          </m:mrow>
+                                          <m:mfrac>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>2</m:mn>
+                                          </m:mfrac>
+                                        </m:mrow>
+                                      </m:mfenced>
+                                    </m:mrow>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo stretchy="false">)</m:mo>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+ \(  - 3 \)  \( 3 \) + \( 2 \)  \( 5 \)  {} #  \(  - 3 \)  \( 4 \) + \( 2 \)  \( 6 \)  {} ##
+ left (2 {  {1}  over  {2} }  right ) \( 3 \) + left ( - 1 {  {1}  over  {2} }  right ) \( 5 \)  {} #  left (2 {  {1}  over  {2} }  right ) \( 4 \) + left ( - 1 {  {1}  over  {2} }  right ) \( 6 \) {}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+                <media id="id1166871550938" alt=""><image src="../../media/graphics2-cb69.png" mime-type="image/png"/></media>
+                <m:math>
+                  <m:semantics>
+                    <m:mrow>
+                      <m:mstyle fontsize="12pt">
+                        <m:mrow>
+                          <m:mfenced open="[" close="]">
+                            <m:mtable>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                              <m:mtr>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                                <m:mtd>
+                                  <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow/>
+                                  </m:mrow>
+                                </m:mtd>
+                              </m:mtr>
+                            </m:mtable>
+                          </m:mfenced>
+                        </m:mrow>
+                      </m:mstyle>
+                      <m:mrow/>
+                    </m:mrow>
+                    <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation>
+                  </m:semantics>
+                </m:math>
+              </entry>
+              <entry>
+                <emphasis>Do the multiplication.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mn>9</m:mn></m:mrow><m:mo stretchy="false">+</m:mo><m:mtext>10</m:mtext></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mtext>12</m:mtext></m:mrow><m:mo stretchy="false">+</m:mo><m:mtext>12</m:mtext></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo stretchy="false">−</m:mo><m:mn>7</m:mn></m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mtext>10</m:mtext><m:mo stretchy="false">−</m:mo><m:mn>9</m:mn></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+ - 9+"10" {} #  - "12"+"12" {} ##
+7 {  {1}  over  {2} }  - 7 {  {1}  over  {2} }  {} # "10" - 9{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>0</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 0 {} ##
+0 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math><media id="id1166891264575" alt=""><image src="../../media/graphics3-3794.png" mime-type="image/png"/></media></entry>
+              <entry>
+                <emphasis>It works!</emphasis>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para id="id7890644">Note that, to fully test it, we would have to try the multiplication in <emphasis>both orders</emphasis>. Why? Because, in general, changing the order of a matrix multiplication changes the answer; but the definition of an inverse matrix specifies that it must work both ways! Only one order was shown above, so technically, we have only half-tested this inverse.</para>
+      <para id="id7890672">This process does not have to be memorized: it should make logical sense. Everything we have learned about matrices should make logical sense, except for the very arbitrary-looking definition of matrix multiplication.</para>
+
+  </content>
+</document>

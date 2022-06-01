@@ -1,0 +1,269 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Matrix Concepts -- Determinants</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m18289</md:content-id>
+  <md:title>Matrix Concepts -- Determinants</md:title>
+  <md:abstract>This module covers matrix determinants and their uses.</md:abstract>
+  <md:uuid>d9b04b66-8295-4674-8e5c-ffe59ac62e2a</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/2-by-2-determinants" strength="3">2x2 Determinant Video</link>
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/3-by-3-determinants" strength="3">3x3 Determinant Video</link>
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/area-with-determinants" strength="3">Area Determinant Video</link>
+      <link url="http://www.brightstorm.com/d/math/s/precalculus/u/systems-of-linear-equations-and-matrices/t/simplifying-determinants" strength="3">Simplifying Determinants Video</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    <section id="id11317188">
+      <title>The Determinant of a 2x2 Matrix</title>
+      <para id="id9677992">In the exercise “Inverse of the Generic 2x2 Matrix,” you found that the inverse of the matrix 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>a</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>b</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>c</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>d</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+a {} # b {} ##
+c {} # d{}
+}  right ]} {}</m:annotation></m:semantics></m:math> is 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mstyle fontstyle="italic"><m:mrow><m:mtext>ad</m:mtext></m:mrow></m:mstyle><m:mo stretchy="false">−</m:mo><m:mstyle fontstyle="italic"><m:mrow><m:mtext>bc</m:mtext></m:mrow></m:mstyle></m:mrow></m:mfrac></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ {  {1}  over  { ital "ad" -  ital "bc"} } } {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>d</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mi>b</m:mi></m:mrow><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mrow><m:mo stretchy="false">−</m:mo><m:mi>c</m:mi></m:mrow><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>a</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+d {} #  - b {} ##
+ - c {} # a{}
+}  right ]} {}</m:annotation></m:semantics></m:math>. This formula can be used to very quickly find the inverse of any 2x2 matrix.</para>
+      <para id="id11388577">Note that if 
+<m:math>
+<m:mi>a</m:mi>
+<m:mi>d</m:mi>
+<m:mo>–</m:mo>
+<m:mi>b</m:mi>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math>, the formula does not work, since it puts a 0 in the denominator. This tells us that, for any 2x2 matrix, if <m:math>
+<m:mi>a</m:mi>
+<m:mi>d</m:mi>
+<m:mo>–</m:mo>
+<m:mi>b</m:mi>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math> the matrix <emphasis>has no inverse</emphasis>.</para>
+      <para id="id11527090">The quantity ad–bc is therefore seen to have a special importance for 2x2 matrices, and it is accorded a special name: the “determinant.” Determinants are represented mathematically with absolute value signs: the determinant of matrix [A] is |A|.</para>
+      <para id="id10738073"><title>Definition of the Determinant of a 2x2 Matrix</title>If matrix <m:math>
+<m:mo>[</m:mo>
+<m:mi>A</m:mi>
+<m:mo>]</m:mo>
+<m:mo>=</m:mo>
+<m:mo>[</m:mo>
+<m:mtable>
+<m:mtr><m:mtd><m:mi>a</m:mi></m:mtd>
+<m:mtd><m:mi>b</m:mi></m:mtd></m:mtr>
+<m:mtr><m:mtd><m:mi>c</m:mi></m:mtd>
+<m:mtd><m:mi>d</m:mi></m:mtd></m:mtr>
+</m:mtable>
+<m:mo>]</m:mo>
+</m:math>,
+the determinant is the number
+<m:math>
+<m:mo>|</m:mo>
+<m:mi>A</m:mi>
+<m:mo>|</m:mo>
+<m:mo>=</m:mo>
+<m:mi>a</m:mi>
+<m:mi>d</m:mi>
+<m:mo>-</m:mo>
+<m:mi>b</m:mi>
+<m:mi>c</m:mi>
+</m:math>.</para>
+      
+      <para id="id8342365">For instance, for the matrix 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 4 {} ##
+5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math>, the determinant is (3)(6)–(4)(5) = –2.</para>
+      <para id="id9668464">Note that the determinant is a <emphasis>number</emphasis>, not a matrix. It is a special number that is <emphasis>associated with</emphasis> a matrix.</para>
+      <para id="id9342668">We said earlier that “if 
+<m:math>
+<m:mi>a</m:mi>
+<m:mi>d</m:mi>
+<m:mo>–</m:mo>
+<m:mi>b</m:mi>
+<m:mi>c</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math> the matrix <emphasis>has no inverse</emphasis>.” We can now restate this result.</para>
+      <para id="id11784655">Any square matrix whose determinant is <emphasis>not</emphasis> 0, has an inverse matrix. Any square matrix with determinant 0 has no inverse.</para>
+      <para id="id6885321">This very important result is analogous to the result stated earlier for numbers: every number except 0 has an inverse.</para>
+    </section>
+    <section id="id10955456"><title>The Determinant of a 3x3 Matrix (or larger)</title>
+      
+      <para id="id10847911">Any <emphasis>square matrix</emphasis> has a determinant—an important number associated with that matrix. Non-square matrices do not have a determinant.</para>
+      <para id="id10388003">How do you find the determinant of a 3x3 matrix? The method presented here is referred to as “expansion by minors.” There are other methods, but they turn out to be mathematically equivalent to this one: that is, they end up doing the same arithmetic and arriving at the same answer.</para>
+      <table id="id10406795" summary="A table that shows how to find the determinant of a 3 x 3 matrix.">
+        <tgroup cols="2">
+
+          <colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+<thead>        
+
+            <row>
+              <entry namest="c1" nameend="c2">Example: Finding the Determinant of a 3x3 Matrix</entry>
+            </row>
+</thead>
+<tbody>
+            <row>
+              <entry>Find the determinant of 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+2 {} # 4 {} # 5 {} ##
+"10" {} # 8 {} # 3 {} ##
+1 {} # 1 {} # 1{}
+}  right ]} {}</m:annotation></m:semantics></m:math></entry>
+              <entry>
+                <emphasis>The problem.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+        ***SORRY, THIS MEDIA TYPE IS NOT SUPPORTED.***
+      </entry>
+              <entry>
+                <emphasis>We’re going to walk through the top row, one element at a time, starting with the first element (the 2). In each case, begin by crossing out the row and column that contain that number.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">∣</m:mo><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ lline  matrix {
+8 {} # 3 {} ##
+1 {} # 1{}
+}  rline } {}</m:annotation></m:semantics></m:math>=(8)(1)–(3)(1)=5</entry>
+              <entry>
+                <emphasis>Once you cross out one row and column, you are left with a 2x2 matrix (a “minor”). Take the determinant of that matrix.</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>2(5)=10</entry>
+              <entry>
+                <emphasis>Now, that “minor” is what we got by crossing out a 2 in the top row. Multiply that number in the top row (2) by the determinant of the minor (5).</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+        ***SORRY, THIS MEDIA TYPE IS NOT SUPPORTED.***
+      (10)(1)–(3)(1)= 74(7)=28</entry>
+              <entry>
+                <emphasis>Same operation for the second element in the row (the 4 in this case)...</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>
+        ***SORRY, THIS MEDIA TYPE IS NOT SUPPORTED.***
+      (10)(1)–(8)(1) = 25(2)=10</entry>
+              <entry>
+                <emphasis>...and the third (the 5 in this case).</emphasis>
+              </entry>
+            </row>
+            <row>
+              <entry>+10 – 28 + 10 = –8</entry>
+              <entry>
+                <emphasis>Take these numbers, and alternately add and subtract them; add the first, subtract the second, add the third. The result of all that is the determinant.</emphasis>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para id="id12057809">This entire process can be written more concisely as:</para>
+      <para id="id11689851"><m:math>
+<m:mo>|</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd><m:mn>2</m:mn></m:mtd>
+<m:mtd><m:mn>4</m:mn></m:mtd>
+<m:mtd><m:mn>5</m:mn></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mn>10</m:mn></m:mtd>
+<m:mtd><m:mn>8</m:mn></m:mtd>
+<m:mtd><m:mn>3</m:mn></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+</m:mtr>
+</m:mtable>
+<m:mo>|</m:mo>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>|</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd><m:mn>8</m:mn></m:mtd>
+<m:mtd><m:mn>3</m:mn></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+</m:mtr>
+</m:mtable>
+<m:mo>|</m:mo>
+<m:mn>-4</m:mn>
+<m:mo>|</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd><m:mn>10</m:mn></m:mtd>
+<m:mtd><m:mn>3</m:mn></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+</m:mtr>
+</m:mtable>
+<m:mo>|</m:mo>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+
+<m:mo>|</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd><m:mn>10</m:mn></m:mtd>
+<m:mtd><m:mn>8</m:mn></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+<m:mtd><m:mn>1</m:mn></m:mtd>
+</m:mtr>
+</m:mtable>
+<m:mo>|</m:mo>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>(</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>-</m:mo>
+<m:mn>4</m:mn>
+<m:mo>(</m:mo>
+<m:mn>7</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:mo>(</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>-8</m:mn>
+</m:math></para>
+      <para id="id10541120">This method of “expansion of minors” can be extended upward to any higher-order square matrix. For instance, for a 4x4 matrix, each “minor” that is left when you cross out a row and column is a 3x3 matrix. To find the determinant of the 4x4, you have to find the determinants of all four 3x3 minors!</para>
+      <para id="id9062070">Fortunately, your calculator can also find determinants. Enter the matrix given above as matrix [D]. Then type:</para>
+      <para id="id9769421"><code display="inline">MATRX</code> ► <code display="inline">1</code><code display="inline">MATRX 4 ) ENTER</code></para>
+      <para id="id10407298">The screen should now look like this:</para>
+      <figure id="id7028007"><media id="id1172355214765" alt="A Picture showing the determinant of the matrix."><image src="../../media/graphics1-da74.png" mime-type="image/png" print-width="3in"/></media></figure>
+      <para id="id10667362">If you watched the calculator during that sequence, you saw that the right-arrow key took you to the <code display="inline">MATH</code> submenu within the <code display="inline">MATRIX</code> menus. The first item in that submenu is <code display="inline">DET (</code> which means “determinant of.”</para>
+      <para id="id10405063">What does the determinant mean? It turns out that this particular odd set of operations has a surprising number of applications. We have already seen one—in the case of a 2x2 matrix, the determinant is part of the inverse. And for any square matrix, the determinant tells you whether the matrix <emphasis>has</emphasis> an inverse at all.</para>
+      <para id="id9665037">Another application is for finding the area of triangles. To find the area of a triangle whose vertices are (a,b), (c,d), and (e,f), you can use the formula: Area = ½
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mo stretchy="false">∣</m:mo><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>a</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>c</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>e</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>b</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>d</m:mi><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mi>f</m:mi><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable><m:mo stretchy="false">∣</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ lline  matrix {
+a {} # c {} # e {} ##
+b {} # d {} # f {} ##
+1 {} # 1 {} # 1{}
+}  rline } {}</m:annotation></m:semantics></m:math>. Hence, if you draw a triangle with vertices (2,10), (4,8), and (5,3), the above calculation shows that the area of this triangle will be 4.</para>
+    </section>
+  </content>
+</document>

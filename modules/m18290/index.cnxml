@@ -1,0 +1,165 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Matrix Concepts -- Matrices on Calculators</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>45317389-0586-4c85-89fa-fd384a8b052c</md:uuid>
+</metadata>
+  <content>
+
+      <para id="id11551998">Many modern graphing calculators have all the basic matrix operations built into them. The following is a brief overview of how to work with matrices on a TI-83, TI-83 Plus, TI-84, or TI-84 Plus.</para>
+      <para id="id12438735">The calculator has room to store up to ten matrices at once. It refers to these matrices as [A], [B], and so on, through [J]. Note that these are <emphasis>not</emphasis> the same as the 26 lettered memories used for numbers.</para>
+      <para id="id12231501">The following steps will walk you through the process of entering and manipulating matrices.</para>
+      
+
+<list id="id4299140" list-type="enumerated">
+
+<item>Hit the <code display="inline">MATRX</code> button. On a TI-83, this is a standalone button; on a TI-83 Plus, you first hit <code display="inline">2nd</code> and then <code display="inline">MATRIX</code> (above the <code><m:math>
+<m:msup><m:mi>x</m:mi><m:mn>–1</m:mn></m:msup></m:math></code> button). The resulting display is a list of all the available matrices. (You have to scroll down if you want to see the ones below <code display="inline">[G]</code>.)
+
+      <figure id="id10819080"><media id="idm11208848" alt="A graph of menu from a TI-83 graphing calculator."><image src="../../media/graphics1-36a4.png" mime-type="image/png" print-width="3in"/></media></figure>
+</item>
+        <item>Hit the <emphasis>right arrow key</emphasis> ► twice, to move the focus from <code display="inline">NAMES</code> to <code display="inline">EDIT</code>. This signals that you want to create, or change, a matrix.
+      <figure id="id12080033"><media id="idp2534656" alt="A graph of menu from a TI-83 graphing calculator."><image src="../../media/graphics2-1e6c.png" mime-type="image/png" print-width="3in"/></media></figure>
+</item>
+              <item>Hit the number <code display="inline">1</code> to indicate that you want to edit the <emphasis>first</emphasis> matrix, <code display="inline">[A]</code>.</item>
+        
+<item>Hit <code display="inline">4 ENTER 3 ENTER</code> to indicate that you want to create a 4x3 matrix. (4 rows, 3 columns.)
+      <figure id="id10420220"><media id="idp439952" alt="Screenshot of a TI-83 graphing calculator displaying a 4x3 matrix."><image src="../../media/graphics3-7255.png" mime-type="image/png" print-width="3in"/></media></figure>
+</item>
+ 
+        <item>Hit <code display="block" id="idp3715072">
+1  ENTER 2  ENTER 3  ENTER
+4  ENTER 5  ENTER 6  ENTER
+7  ENTER 8  ENTER 9  ENTER
+10 ENTER 11 ENTER 12 ENTER</code>
+   
+   This fills in the matrix with those numbers (you can watch it fill as you go). If you make a mistake, you can use the arrow keys to move around in the matrix until the screen looks like the picture below.
+      <figure id="id12083509"><media id="idm3620544" alt="Screenshot of a TI-83 graphing calculator displaying a 4x3 matrix."><image src="../../media/graphics4-adad.png" mime-type="image/png" print-width="3in"/></media></figure>
+</item>
+      
+        <item>Hit <code display="inline">2nd Quit</code> to return to the main screen.</item>
+
+        <item>Return to the main matrix menu, as before. However, this time, do <emphasis>not </emphasis>hit the right arrow to go to the <code display="inline">EDIT</code> menu. Instead, from the NAMES menu, hit the number <code display="inline">1</code>. This puts <code display="inline">[A]</code> on the main screen. Then hit <code display="inline">ENTER</code> to display matrix <code display="inline">[A]</code>.
+      <figure id="id9751326">
+        <media id="idm3600464" alt=""><image src="../../media/graphics5-cfd7.png" mime-type="image/png" height="67" width="100"/></media>
+      </figure>
+</item>
+
+        <item>Go through the process (steps 1-7) again, with a few changes. This time, define matrix <code display="inline">[B]</code> instead of matrix <code display="inline">[A]</code>. (This will change step 3: once you are in the <code display="inline">EDIT</code> menu, you will hit a <code display="inline">2</code> instead of a 1.) Define <code display="inline">[B]</code> as a 3x2 matrix in step 4. Then, in step 5, enter the following numbers:
+     
+      <equation id="id10867477">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mstyle fontsize="12pt">
+                <m:mrow>
+                  <m:mfenced open="[" close="]">
+                    <m:mtable>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>10</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>40</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>20</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>50</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                      <m:mtr>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>30</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                        <m:mtd>
+                          <m:mrow>
+                            <m:mtext>60</m:mtext>
+                            <m:mrow/>
+                          </m:mrow>
+                        </m:mtd>
+                      </m:mtr>
+                    </m:mtable>
+                  </m:mfenced>
+                </m:mrow>
+              </m:mstyle>
+              <m:mrow/>
+            </m:mrow>
+            <m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"10" {} # "40" {} ##
+"20" {} # "50" {} ##
+"30" {} # "60"{}
+}  right ]} {}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </equation>
+      When you are done, and have returned to the main screen and punched 2 in the NAMES menu (step 7), your main screen should look like this:
+      <figure id="id11811370"><media id="idp2519392" alt="Screenshot of a TI-83 graphing calculator displaying a 4x3 matrix."><image src="../../media/graphics6.png" mime-type="image/png" print-width="3in"/></media></figure>
+</item>
+
+         <item>Now, type the following keys, watching the calculator as you do so. TI-83 Plus users should always remember to hit <code display="inline">2nd MATRIX</code> instead of just <code display="inline">MATRX.</code>
+        <code display="inline">MATRX 1 + MATRX 2</code>
+      
+      <figure id="id12360209"><media id="idm2217056" alt="Screenshot of a TI-83 graphing calculator displaying a 4x3 matrix and the resulting sum of adding matrices A &amp; B."><image src="../../media/graphics7.png" mime-type="image/png" print-width="3in"/></media></figure>
+      This instructs the computer to add the two matrices. Now hit <code display="inline">ENTER</code>
+      <figure id="id4275893"><media id="idp1545216" alt="Screenshot of a TI-83 graphing calculator."><image src="../../media/graphics8.png" mime-type="image/png" print-width="3in"/></media></figure>
+      Hey, what happened? You asked the computer to add two matrices. But these matrices have <emphasis>different dimensions</emphasis>. Remember that you can only add two matrices if they have the same dimensions—that is, the same number of rows as columns. So you got an “Error: Dimension Mismatch.”
+      Hit <code display="inline">ENTER</code> to get out of this error and return to the main screen.</item>
+
+        <item>Now try the same sequence without the + key: <code display="inline">MATRX 1 MATRX 2 ENTER</code>
+      
+      <figure id="id11659233"><media id="idm2238480" alt="Screenshot of a TI-83 graphing calculator displaying a matrix and the resulting product of multiplying matrices A &amp; B."><image src="../../media/graphics9.png" mime-type="image/png" print-width="3in"/></media></figure>
+      This instructs the calculator to <emphasis>multiply</emphasis> the two matrices. This is a legal multiplication—in fact, you may recognize it as the multiplication that we did earlier. The calculator displays the result that we found by hand:
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>2</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>7</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>8</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>9</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>11</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>12</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+1 {} # 2 {} # 3 {} ##
+4 {} # 5 {} # 6 {} ##
+7 {} # 8 {} # 9 {} ##
+"10" {} # "11" {} # "12"{}
+}  right ]} {}</m:annotation></m:semantics></m:math><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>10</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>40</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>20</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>50</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>30</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>60</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"10" {} # "40" {} ##
+"20" {} # "50" {} ##
+"30" {} # "60"{}
+}  right ]} {}</m:annotation></m:semantics></m:math> = 
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mtext>140</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>320</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>320</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>770</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>500</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>1220</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mtext>680</m:mtext><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mtext>1670</m:mtext><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+"140" {} # "320" {} ##
+"320" {} # "770" {} ##
+"500" {} # "1220" {} ##
+"680" {} # "1670"{}
+}  right ]} {}</m:annotation></m:semantics></m:math></item>
+         
+     <item>Enter a third matrix, matrix [C]=
+<m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mfenced open="[" close="]"><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>3</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>4</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mn>5</m:mn><m:mrow/></m:mrow></m:mtd><m:mtd><m:mrow><m:mn>6</m:mn><m:mrow/></m:mrow></m:mtd></m:mtr></m:mtable></m:mfenced></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{ left [ matrix {
+3 {} # 4 {} ##
+5 {} # 6{}
+}  right ]} {}</m:annotation></m:semantics></m:math>. When you confirm that it is entered correctly, the screen should look like this:
+      
+      <figure id="id12611269"><media id="idp1674544" alt="Screenshot of a TI-83 graphing calculator displaying a 2x2 matrix."><image src="../../media/graphics10.png" mime-type="image/png" print-width="3in"/></media></figure>
+     Now type <code>MATRX 3 x-1 ENTER</code>
+      <figure id="id12622847">
+        <media id="idm17443616" alt=""><image src="../../media/graphics11.png" mime-type="image/png" height="67" width="100"/></media>
+      </figure>
+      
+This takes the <emphasis>inverse</emphasis> of matrix [C]. Note that the answer matches the inverse matrix that we found before.</item>
+      
+        <item>Type <code display="inline">MATRX 3 x-1 MATRX 3 ENTER</code>
+      <figure id="id12396455"><media id="idm2478832" alt="Screenshot of a TI-83 graphing calculator ."><image src="../../media/graphics12.png" mime-type="image/png" print-width="3in"/></media></figure>
+      This instructs the calculator to multiply matrix [C]-1 times matrix [C]. The answer, of course, is the 2×2 identity matrix [I].</item></list>
+
+  </content>
+</document>
